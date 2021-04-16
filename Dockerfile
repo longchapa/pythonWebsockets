@@ -8,7 +8,7 @@ COPY . /app
 
 #RUN apt-get update
 
-RUN apt-get install -y nano curl wget
+#RUN apt-get install -y nano curl wget
 
 RUN pip install -r requirements.txt
 
