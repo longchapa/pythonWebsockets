@@ -9,7 +9,7 @@ COPY . /app
 #RUN apt-get update
 
 #RUN apt-get install -y nano curl wget
-
+RUN pip install setuptools
 RUN pip install -r requirements.txt
 
 ENV VERSION 3.0.b
