@@ -5,9 +5,7 @@ import datetime
 import random
 import websockets
 
-print("Hello World!!!")
-
-""" async def time(websocket, path):
+async def time(websocket, path):
     while True:
         now = datetime.datetime.utcnow().isoformat() + 'Z'
         await websocket.send(now)
@@ -15,5 +13,5 @@ print("Hello World!!!")
 
 start_server = websockets.serve(time, 'https://ec2-3-95-202-47.compute-1.amazonaws.com', 8080)
 
-asyncio.get_event_loop().run_until_complete(start_server)
+""" asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever() """
