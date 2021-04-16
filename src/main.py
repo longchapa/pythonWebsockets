@@ -13,5 +13,5 @@ async def time(websocket, path):
 
 start_server = websockets.serve(time, 'https://ec2-3-95-202-47.compute-1.amazonaws.com', 8080)
 
-""" asyncio.get_event_loop().run_until_complete(start_server)
-asyncio.get_event_loop().run_forever() """
+asyncio.get_event_loop().run_until_complete(start_server)
+#asyncio.get_event_loop().run_forever()
