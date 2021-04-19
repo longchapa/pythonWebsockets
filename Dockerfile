@@ -1,23 +1,12 @@
-FROM python:3.8-alpine3.13
-
-RUN mkdir /app
-
-WORKDIR /app
+FROM ubuntu:focal
 
 COPY . /app
+WORKDIR /app
 
-#RUN apt-get update
+USER root
 
-#RUN apt-get install -y nano curl wget
-RUN pip install setuptools
+ADD requirements.txt /app
+WORKDIR /app
 RUN pip install -r requirements.txt
-
-ENV VERSION 3.0.b
-
-ENV FLASK_APP main.py
-ENV FLASK_DEBUG false
-ENV FLASK_RUN_PORT 8080
-
-COPY src/ .
-
-CMD ["python", "main.py"]
+ENTRYPOINT ["python3"]
+CMD ["main.py"]
